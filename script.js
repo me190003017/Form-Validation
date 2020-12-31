@@ -1,4 +1,4 @@
-console.log("this is scipt of this project")
+// console.log("this is scipt of this project")
 
 let validName=false;
 let validEmail=false;
@@ -7,6 +7,11 @@ let validPhone=false;
 const Name=document.getElementById('name');
 const email=document.getElementById('email')
 const phone=document.getElementById('phone');
+const address=document.getElementById('address');
+const extra=document.getElementById('extra');
+const car=document.getElementById('car');
+// console.log(car.value)
+
 // console.log(email)
 Name.addEventListener('blur',()=>{
     // console.log("name is blur")
@@ -78,6 +83,16 @@ submit.addEventListener('click',(e)=>{
         alt.innerHTML=html1;
         let success=document.getElementById('success')
         success.classList.add("show")
+        Name.value=null;
+        email.value=null;
+        phone.value=null;
+        extra.value=null;
+        address.value=null;
+        car.value="Marcedies Benz";
+        phone.classList.remove("is-valid");
+        email.classList.remove("is-valid");
+        Name.classList.remove("is-valid");
+
     }else{
         let html2=`<div id="danger" class="alert alert-danger alert-dismissible fade m-0  " role="alert">
         <strong>Error!</strong> Your have not filled any information correctly please check 
