@@ -1,4 +1,4 @@
-// console.log("this is scipt of this project")
+console.log("this is scipt of this project")
 
 let validName=false;
 let validEmail=false;
@@ -10,7 +10,7 @@ const phone=document.getElementById('phone');
 const address=document.getElementById('address');
 const extra=document.getElementById('extra');
 const car=document.getElementById('car');
-// console.log(car.value)
+console.log(car.value)
 
 // console.log(email)
 Name.addEventListener('blur',()=>{
@@ -22,6 +22,9 @@ Name.addEventListener('blur',()=>{
     if(regex.test(str)){
         Name.classList.remove("is-invalid");
         Name.classList.add("is-valid");
+        if(str=""){
+            validName=false;
+        }
         validName=true;
         // console.log("it entered a valid username")
     }else{
@@ -40,6 +43,9 @@ email.addEventListener('blur',()=>{
     if(regex.test(str)){
         email.classList.remove("is-invalid");
         email.classList.add("is-valid");
+        if(str=""){
+            validEmail=false;
+        }
         validEmail=true;
         // console.log("it entered a valid email")
     }else{
@@ -58,6 +64,9 @@ phone.addEventListener('blur',()=>{
     if(regex.test(str)){
         phone.classList.remove("is-invalid");
         phone.classList.add("is-valid");
+        if(str=""){
+            validPhone=false;
+        }
        validPhone=true;
         // console.log("it entered a valid phone number")
     }else{
